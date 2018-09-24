@@ -1,15 +1,20 @@
-import numpy as ny
+import numpy as np
 import matplotlib.pyplot as plt
-x=ny.arange(4,-4,0.01)
-y1=x**2
-y2=-x**2
-y3=(x-1)**2
-y4=x**2-1
+#  form mpl_toolkits.mplot3d import Axes3D
+
+fig=plt.figure()
+ax=fig.add_subplot(111,projection='3d')
 
 
-plt.plot(x,y1)
-plt.plot(x,y2)
-plt.plot(x,y3)
-plt.plot(x,y4)
+# make data
+seg=24
+u=np.linspace(0,2*np.pi,seg)
+v=np.linspace(0,np.pi,seg)
+x=10*np.outer(np.cos(u),np.sin(v))
+y=10*np.outer(np.sin(u),np.sin(v))
+z=10*np.outer(np.ones(seg),np.cos(v))
+
+# Plot the surface
+ax.plot_surface(x,y,z,color='red')
+
 plt.show()
-
