@@ -20,3 +20,8 @@ for i in range(5):
     break
 else:
   print("done")
+
+if radius==10:
+  pass # pass的意思就是啥也不做，但又不能啥也不写
+else:
+  print("done")
