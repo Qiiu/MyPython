@@ -25,3 +25,10 @@ if radius==10:
   pass # pass的意思就是啥也不做，但又不能啥也不写
 else:
   print("done")
+
+dic={1:"one",2:"two",3:"three"}
+dic[4]="four"
+for item in dic.keys():
+  print(item)
+del dic[2]
+print("value : %s" % dic.values())
